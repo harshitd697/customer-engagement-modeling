@@ -59,7 +59,7 @@ customer-engagement-modeling/
 
 | Model | AUC Score |
 |---|---|
-| **XGBoost** | **0.8730** ✅ Winner |
+| **XGBoost** | **0.8730** Winner |
 | CatBoost | 0.8524 |
 
 ### 5. Ranking Output
@@ -75,58 +75,7 @@ customer-engagement-modeling/
 - XGBoost outperformed CatBoost by ~2%
 - Most important features: `item_total_views`, `visitor_total_views`, `hour`
 
----
 
-## Key Concepts Used
-
-- **AUC-ROC**: Evaluation metric for imbalanced classification (better than accuracy)
-- **scale_pos_weight**: XGBoost parameter to handle class imbalance
-- **Feature Engineering**: Creating meaningful signals from raw interaction logs
-- **Stratified Split**: Maintaining class ratio in train/val split
-- **Gradient Boosting**: XGBoost and CatBoost ensemble methods
-
----
-
-## Tech Stack
-
-```
-Python 3.x
-pandas
-numpy
-xgboost
-catboost
-scikit-learn
-matplotlib
-seaborn
-```
-
----
-
-## How to Run
-
-```bash
-# 1. Clone the repo
-git clone https://github.com/harshitd697/customer-engagement-modeling.git
-cd customer-engagement-modeling
-
-# 2. Install dependencies
-pip install pandas numpy xgboost catboost scikit-learn matplotlib seaborn
-
-# 3. Download dataset
-# Go to: https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset
-# Download events.csv and place in project folder
-
-# 4. Run
-python customer_engagement_modeling.py
-```
-
----
-
-## Resume Summary
-
-> Predicted customer engagement probability on 100K+ e-commerce interaction events by engineering behavioral, temporal, and contextual features from raw clickstream data. Handled 96/4 class imbalance using scale_pos_weight. Trained and compared XGBoost and CatBoost, achieving AUC of 0.8730. Generated personalized item rankings per visitor by predicted engagement probability.
-
----
 
 ## Author
 
